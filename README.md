@@ -15,13 +15,13 @@ If tested it on all my Mac OS X and Linux systems I have.
 # Installation
 
 
-Just download the `make_ssh_config.sh` script and create your config file. The default config file has to be in the same directory as the script and should be named `config`. Otherwise you can specific on as an argument.
+Just download the `make_ssh_config.sh` script and create your config file. The default config file has to be in the same directory as the script and should be named `config`. Otherwise you can specific one as an argument.
 
 Make the script exacutable:
 
     chmod +x make_ssh_config.sh
 
-Insert the cutting marks to your `~/.ssh/config`
+Insert the cutting marks (specified in your config) to your `~/.ssh/config`
 
 # Usage
 
@@ -56,9 +56,9 @@ Here is a simple example configuration:
     }
 ```
 
-The hook is executed before the files are merged togehter on temporarily copy of the source files in a temp directory. This is useful if you share your config with your coworkers over an git repo. In the example it replaces WHOAMI with my current username and make a backup of the original file.
+The hook is executed before the files are merged together on a temporarily copy of the source files in a temp directory. This is useful if you share your config with your coworkers over an git repository. In the example it replaces 'WHOAMI' with my current username and make a backup of the original file.
 
-Following Options can be written in your config file:
+Following Options can be written in your config:
 
 * SSH_CONFIG <- the file where the concatenated content will be insert.
 * SSH_CONFD <- the directory where the separated config parts are placed
