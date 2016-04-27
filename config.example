@@ -1,0 +1,15 @@
+SSH_CONFIG="~/.ssh/config"
+SSH_CONFD="~/.ssh/conf.d/"
+START_MARK="### BEGIN GENERATED SSH CONFIG ###"
+END_MARK="### END GENERATED SSH CONFIG ###"
+
+PRE_HOOK (){
+    # Make a backup
+    cp $SSH_CONFIG ${SSH_CONFIG}.backup
+
+    # Replace WHOAMI with my current username
+    WHOAMI=$(whoami)
+    # For Compatibility between OS X (BSD Version) and Linux this workaround
+    find $TEMPD -type f -exec sed -i.bak -e "s/WHOAMI/${WHOAMI}/g" {} \;
+    find $TEMPD -type f -name "*.bak" -delete
+}

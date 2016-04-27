@@ -1,0 +1,3 @@
+# 020.lorem
+Host *.example.net
+        ProxyCommand ssh -q -A -x bastionhost.example.com -W %h:22

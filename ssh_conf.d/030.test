@@ -1,0 +1,5 @@
+# 030.test
+Host testhost
+        Hostname testhost.example.com
+        User WHOAMI
+        ProxyCommand ssh -q -A -x 127.0.0.1 -W %h:22
