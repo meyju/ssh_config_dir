@@ -9,7 +9,7 @@ I use it to separate multiple projects and maintain it individually. Please look
 
 - Bash >= 3 (Tested)
 
-If tested it on all my Mac OS X and Linux systems I have.
+I've tested it on all my Mac OS X and Linux systems I have.
 
 
 # Installation
